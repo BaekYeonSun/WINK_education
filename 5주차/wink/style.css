@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+}
+header > h1 {
+    padding: 70px 0;
+}
+header > p {
+    padding-bottom: 10px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(44, 42, 39, 0.983);
+    height: 50px;
+    line-height: 50px;
+}
+nav > ul > li {
+    display: inline-block;
+    color: #fff;
+    padding: 0 15px;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    padding: 0 15px;
+}
+.dropdown-content a {
+    display: block;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+#content { height: 500px; }
+#content > section {
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .5);
+
+    /* 지금은 section태그가 위에 aside태그가 아래에 배치되어 있는데 이를 왼쪽과 오른쪽에 각각 배치해야 함*/
+    /* 즉, 원래는 block 속성이였지만 웹 페이지에서는 section태그는 왼쪽, aside태그는 오른쪽에 있어야 함 */
+    /* 1. inline 속성으로 변경 */
+    /* display: inline-block; */
+    /* 2. float 속성을 사용하여 left와 right로 나타냄 */
+    float: left;
+}
+/* #content > section > article {
+    width: 100%;
+    height: 30%;
+} */
+#content > aside {
+    width: 30%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+
+    /* 1 */
+    /* display: inline-block; */
+    /* 2 */
+    float: right;
+}
+/* #content > aside > div {
+    height: 20%;
+    color: #fff;
+} */
+
+footer {
+    background-color: lightgray;
+    padding: 30px 0;
+    text-align: center;
+}
